@@ -29,24 +29,24 @@ class DetailActivity : AppCompatActivity()
         fooddetailprice.setText(price.toString())
         foodname.setText(name)
         fooddetaildesc.setText(description)
-//        var qnt:Int = Integer.parseInt(quantity.toString())
+        var qnt: String = quantity.text.toString()
 
-//        var helper = DBHelper(this)
-//        val orderbutton = findViewById<Button>(R.id.orderButton)
-//
-//        val personName = findViewById<TextView>(R.id.editTextTextPersonName)
-//        val personPhone = findViewById<TextView>(R.id.editTextPhone)
-//        orderbutton.setOnClickListener()
-//        {
-//            val isInserted:Boolean = helper.insertOrder(personName.toString(),personPhone.toString(),price,image,name.toString(),description.toString(),qnt)
-//            if(isInserted)
-//            {
-//                Toast.makeText(this,"Data Success",Toast.LENGTH_SHORT).show()
-//            }
-//            else
-//            {
-//                Toast.makeText(this,"Error",Toast.LENGTH_SHORT).show()
-//            }
-//        }
+        var helper = DBHelper(this)
+        val orderbutton = findViewById<Button>(R.id.orderButton)
+
+        val personName = findViewById<TextView>(R.id.editTextTextPersonName)
+        val personPhone = findViewById<TextView>(R.id.editTextPhone)
+        orderbutton.setOnClickListener()
+        {
+            val isInserted:Boolean = helper.insertOrder(personName.text.toString(),personPhone.text.toString(),price,image,name.toString(),description.toString(),qnt.toInt())
+            if(isInserted)
+            {
+                Toast.makeText(this,"Data Success",Toast.LENGTH_SHORT).show()
+            }
+            else
+            {
+                Toast.makeText(this,"Error",Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
