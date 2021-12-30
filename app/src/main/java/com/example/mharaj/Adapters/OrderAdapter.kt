@@ -1,5 +1,6 @@
 package com.example.mharaj.Adapters
 
+import android.content.Context
 import android.database.DataSetObserver
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +14,7 @@ import com.example.mharaj.Models.mainModel
 import com.example.mharaj.Models.orderModel
 import com.example.mharaj.R
 
-class OrderAdapter(private val orderlist: ArrayList<orderModel>) : RecyclerView.Adapter<OrderAdapter.ViewHolder>(){
+class OrderAdapter(context: Context ,private val orderlist: ArrayList<orderModel>) : RecyclerView.Adapter<OrderAdapter.ViewHolder>(){
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
     {
         var orderfoodImg = itemView.findViewById<ImageView>(R.id.img)

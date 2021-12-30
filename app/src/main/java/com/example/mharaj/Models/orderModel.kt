@@ -3,7 +3,7 @@ package com.example.mharaj.Models
 class orderModel
 {
     val orderimage:Int
-    val ordername :String
+    var ordername :String
 
     constructor(image:Int , name:String)
     {

@@ -7,13 +7,10 @@
     android:orientation="vertical"
     tools:context=".OrderActivity">
 
-    <GridView
-        android:id="@+id/OrdergridView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnWidth="100dp"
-        android:horizontalSpacing="10dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:listitem="@layout/order_grid_view" />
 </LinearLayout>

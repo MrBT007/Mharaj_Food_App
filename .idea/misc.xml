@@ -8,12 +8,13 @@
         <entry key="..\:/Mharaj/app/src/main/res/layout/activity_about_me.xml" value="0.2" />
         <entry key="..\:/Mharaj/app/src/main/res/layout/activity_detail.xml" value="0.264" />
         <entry key="..\:/Mharaj/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Mharaj/app/src/main/res/layout/activity_order.xml" value="0.2" />
+        <entry key="..\:/Mharaj/app/src/main/res/layout/activity_order.xml" value="0.25" />
         <entry key="..\:/Mharaj/app/src/main/res/layout/activity_orders.xml" value="0.264" />
         <entry key="..\:/Mharaj/app/src/main/res/layout/activity_orders2.xml" value="0.23229166666666667" />
-        <entry key="..\:/Mharaj/app/src/main/res/layout/order_grid_view.xml" value="0.23229166666666667" />
+        <entry key="..\:/Mharaj/app/src/main/res/layout/order_grid_view.xml" value="0.20701754385964913" />
         <entry key="..\:/Mharaj/app/src/main/res/layout/sample_layout.xml" value="0.264" />
         <entry key="..\:/Mharaj/app/src/main/res/layout/toolbar.xml" value="0.264" />
+        <entry key="..\:/Mharaj/app/src/main/res/menu/menu.xml" value="0.25677083333333334" />
       </map>
     </option>
   </component>
@@ -22,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.20701754385964913" />
+      </ProjectState>
+    </option>
   </component>
 </project>

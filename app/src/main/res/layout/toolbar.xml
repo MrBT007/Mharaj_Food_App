@@ -32,6 +32,7 @@
                     android:src="@drawable/ic_baseline_food_bank_24" />
 
                 <TextView
+                    android:id="@+id/myorders"
                     android:layout_width="329dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -42,6 +43,20 @@
                     android:background="@color/white"
                     android:fontFamily="cursive"
                     android:text="M'haraj"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="cursive"
+                    android:text="My Orders"
                     android:textColor="@color/black"
                     android:textSize="22dp"
                     android:textStyle="bold" />

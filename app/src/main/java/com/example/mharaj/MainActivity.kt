@@ -4,11 +4,14 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mharaj.Adapters.OrderAdapter
 import com.example.mharaj.Adapters.mainAdapter
 import com.example.mharaj.Adapters.onItemClickListener
 import com.example.mharaj.Models.mainModel
@@ -45,8 +48,13 @@ class MainActivity : AppCompatActivity(),onItemClickListener
             val intent = Intent(this,aboutMe::class.java)
             startActivity(intent)
         }
+        var myorder = findViewById<TextView>(R.id.myorders)
+        myorder.setOnClickListener()
+        {
+            val intent = Intent(this,OrderActivity::class.java)
+            startActivity(intent)
+        }
     }
-
     override fun onCLick(item: mainModel, position: Int)
     {
         val intent = Intent(this,DetailActivity::class.java)
