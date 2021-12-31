@@ -31,43 +31,36 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context,"food.db",null,1)
     }
     fun insertOrder(name:String,phone:String,price:Int,image:Int,desc:String,foodname:String,quantity:Int):Boolean
     {
-        var database:SQLiteDatabase = readableDatabase
+        var database:SQLiteDatabase = writableDatabase
         var values:ContentValues = ContentValues()
         values.put("name",name)
         values.put("phone",phone)
         values.put("price",price)
         values.put("image",image)
-        values.put("foodname",foodname)
         values.put("description",desc)
         values.put("quantity",quantity)
+        values.put("foodname",foodname)
 
         var id:Long = database.insert("orders",null,values)
         return id > 0
     }
     @SuppressLint("Range")
+
+    var orderList = ArrayList<orderModel>()
+     @SuppressLint("Range")
      fun getOrders():ArrayList<orderModel>
     {
-        var orderList = ArrayList<orderModel>()
-        val selestQuery = "SELECT foodname,image FROM orders"
+        val selestQuery = "SELECT quantity,price,image FROM orders"
         val database = this.writableDatabase
-        val cursor:Cursor?
-        try {
-            cursor = database.rawQuery(selestQuery,null)
-        }catch (e:Exception)
-        {
-            e.printStackTrace()
-            database.execSQL(selestQuery)
-            return ArrayList()
-        }
+        val cursor:Cursor = database.rawQuery(selestQuery,null)
 
         if(cursor.moveToFirst())
         {
             do {
-                orderList.add(orderModel(cursor.getInt(cursor.getColumnIndex("image")),cursor.getString(cursor.getColumnIndex("foodname"))))
-                // Not getting food name
+                orderList.add(orderModel(cursor.getInt(cursor.getColumnIndex("quantity")),cursor.getInt(cursor.getColumnIndex("price")),cursor.getInt(cursor.getColumnIndex("image"))))
             }while (cursor.moveToNext())
         }
-        cursor.close()
         return orderList
     }
+
 }

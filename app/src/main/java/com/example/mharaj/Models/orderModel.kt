@@ -2,12 +2,15 @@ package com.example.mharaj.Models
 
 class orderModel
 {
-    val orderimage:Int
-    var ordername :String
+    val quantity:Int
+    var price :Int
+    val img:Int
 
-    constructor(image:Int , name:String)
+
+    constructor(quantity:Int , price:Int,img:Int)
     {
-        this.orderimage = image
-        this.ordername = name
+        this.quantity = quantity
+        this.price = price*quantity
+        this.img = img
     }
 }
